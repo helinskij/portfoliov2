@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Jakub Helinski</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .policy-wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 100px 40px 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .policy-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--accent);
+            text-decoration: none;
+            margin-bottom: 48px;
+            transition: opacity 0.2s;
+        }
+        .policy-back:hover { opacity: 0.7; }
+
+        .policy-title {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 8px;
+        }
+
+        .policy-date {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+            display: block;
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+        }
+
+        .policy-section h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: var(--font-mono);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .policy-section p,
+        .policy-section li {
+            font-size: 15px;
+            color: rgba(240,239,245,0.75);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .policy-section ul {
+            padding-left: 20px;
+        }
+
+        .policy-section ul li {
+            list-style: none;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .policy-section ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 12px;
+        }
+
+        .policy-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
+        }
+
+        .policy-contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 14px;
+        }
+        .policy-contact a:hover { opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursor"></div>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">JH</a>
+    <div class="nav-links">
+        <button class="nav-btn" onclick="window.location.href='index.html#about'">About</button>
+        <button class="nav-btn" onclick="window.location.href='index.html#experience'">Experience</button>
+        <button class="nav-btn" onclick="window.location.href='index.html#projects'">Projects</button>
+        <button class="nav-btn contact-btn" onclick="window.location.href='index.html#contact'">Contact</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-menu" id="mobile-menu">
+    <button onclick="window.location.href='index.html'">About</button>
+    <button onclick="window.location.href='index.html'">Experience</button>
+    <button onclick="window.location.href='index.html'">Projects</button>
+    <button onclick="window.location.href='index.html'">Contact</button>
+</div>
+
+<div class="mountain-bg"></div>
+<div class="mountain-overlay"></div>
+
+<div class="policy-wrap">
+    <h1 class="policy-title">Privacy Policy</h1>
+    <span class="policy-date">Last updated: June 2026</span>
+
+    <div class="policy-section">
+        <h2>Overview</h2>
+        <p>This privacy policy explains how jakubhelinski.com ("this website") handles your information. This is a personal portfolio website operated by Jakub Helinski. Your privacy is important and this policy is written to be clear and straightforward.</p>
+    </div>
+
+    <hr class="policy-divider">
+
+    <div class="policy-section">
+        <h2>Data We Collect</h2>
+        <p>This website does not collect, store, or share any personal data. Specifically:</p>
+        <ul>
+            <li>No analytics or tracking scripts are used</li>
+            <li>No advertising networks are present</li>
+            <li>No user accounts or login systems exist</li>
+            <li>No personal data is sent to third parties</li>
+        </ul>
+    </div>
+
+    <hr class="policy-divider">
+
+    <div class="policy-section">
+        <h2>Cookies</h2>
+        <p>This website uses only one cookie — a functional cookie stored in your browser's <code>localStorage</code> to remember that you have accepted this cookie notice. This cookie:</p>
+        <ul>
+            <li>Contains no personal information</li>
+            <li>Is never sent to any server</li>
+            <li>Is stored locally on your device only</li>
+            <li>Can be cleared at any time by clearing your browser data</li>
+        </ul>
+        <p>No third-party cookies are used on this website.</p>
+    </div>
+
+    <hr class="policy-divider">
+
+    <div class="policy-section">
+        <h2>Contact Form</h2>
+        <p>This website includes a contact form powered by <strong>Formspree</strong>. If you submit the form, your name, email address, and message are sent directly to Formspree's servers and forwarded to the website owner. Formspree's own privacy policy applies to any data submitted through the form. You can review it at <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener" style="color: var(--accent); font-family: var(--font-mono); font-size: 13px;">formspree.io/legal/privacy-policy</a>.</p>
+    </div>
+
+    <hr class="policy-divider">
+
+    <div class="policy-section">
+        <h2>Your Rights (GDPR)</h2>
+        <p>If you are located in the European Union or Poland, you have the following rights under GDPR:</p>
+        <ul>
+            <li>The right to access any personal data held about you</li>
+            <li>The right to request deletion of your data</li>
+            <li>The right to withdraw consent at any time</li>
+        </ul>
+        <p>Since this website collects no personal data beyond contact form submissions, there is minimal data to act upon. For any requests related to contact form data, please reach out directly.</p>
+    </div>
+
+    <hr class="policy-divider">
+
+    <div class="policy-section policy-contact">
+        <h2>Contact</h2>
+        <p>If you have any questions about this privacy policy, you can contact me at:</p>
+        <a href="mailto:contact@jakubhelinski.com">contact@jakubhelinski.com</a>
+    </div>
+</div>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
+document.addEventListener('mouseenter', () => cursor.style.opacity = '1');
+document.querySelectorAll('button, a').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.width = '220px'; cursor.style.height = '220px'; });
+    el.addEventListener('mouseleave', () => { cursor.style.width = '160px'; cursor.style.height = '160px'; });
+});
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+});
+
+// Nav scroll shadow
+window.addEventListener('scroll', () => {
+    const nav = document.getElementById('nav');
+    nav.style.background = window.scrollY > 10 ? 'rgba(10,10,12,0.95)' : 'rgba(10,10,12,0.7)';
+});
+
+// Navigate to section on index page
+const hash = window.location.hash;
+if (hash) {
+    const section = hash.replace('#', '');
+    sessionStorage.setItem('goToSection', section);
+}
+</script>
+</body>
+</html>

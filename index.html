@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Helinski</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png">
+    <meta name="description" content="Jakub Helinski — CS student, help desk technician, and developer passionate about cybersecurity and building cool things.">
+
+    <!-- Google / Search preview -->
+    <meta property="og:title" content="Jakub Helinski">
+    <meta property="og:url" content="https://jakubhelinski.com">
+    <meta property="og:description" content="CS student & developer passionate about cybersecurity and web development.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jakubhelinski.com/preview.png">
+</head>
+<body>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursor"></div>
+
+<!-- Parallax mountain background -->
+<div class="mountain-bg" id="mountain-bg"></div>
+<div class="mountain-overlay"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <a href="#" class="nav-logo" onclick="showSection('home')">JH</a>
+    <div class="nav-links">
+        <button class="nav-btn" onclick="showSection('about')">About</button>
+        <button class="nav-btn" onclick="showSection('resume')">Experience</button>
+        <button class="nav-btn" onclick="showSection('projects')">Projects</button>
+        <button class="nav-btn contact-btn" onclick="showSection('contact')">Contact</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-menu" id="mobile-menu">
+    <button onclick="showSection('about'); closeMobile()">About</button>
+    <button onclick="showSection('resume'); closeMobile()">Experience</button>
+    <button onclick="showSection('projects'); closeMobile()">Projects</button>
+    <button onclick="showSection('contact'); closeMobile()">Contact</button>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- HOME -->
+    <section class="section active" id="section-home">
+        <div class="hero">
+            <div class="hero-tag">
+                <span class="dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title">
+                <span class="line">Jakub</span>
+                <span class="line accent">Helinski</span>
+            </h1>
+            <p class="hero-sub" id="typed-sub"></p>
+            <div class="hero-chips">
+                <span class="chip">HTML / CSS</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Java</span>
+                <span class="chip">Python</span>
+                <span class="chip">Cybersecurity</span>
+            </div>
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="showSection('projects')">View Projects</button>
+                <button class="btn-ghost" onclick="showSection('contact')">Get in Touch →</button>
+            </div>
+        </div>
+        <!-- Floating stat cards -->
+        <div class="stat-cards">
+            <div class="stat-card">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Languages</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">10+</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">∞</span>
+                <span class="stat-label">Curiosity</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="section-about">
+        <div class="page-header">
+            <span class="page-num">01</span>
+            <h2 class="page-title">About Me</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I'm a computer science student and help desk technician with a passion for coding and cybersecurity. Between coursework and work, I'm constantly building, learning, and pushing the limits of what I can create.</p>
+                <p>My goal is to grow into a professional programmer or cybersecurity specialist — someone who builds things that matter and protects systems that need it.</p>
+                <div class="thm-badge">
+                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4983279" title="TryHackMe badge"></iframe>
+                </div>
+            </div>
+            <div class="skills-panel">
+                <div class="skills-group">
+                    <h3 class="skills-label">Proficient</h3>
+                    <div class="skill-pills">
+                        <span class="pill pill-green">HTML</span>
+                        <span class="pill pill-green">CSS</span>
+                        <span class="pill pill-green">JavaScript</span>
+                        <span class="pill pill-green">Java</span>
+                        <span class="pill pill-green">Python</span>
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <h3 class="skills-label">Familiar</h3>
+                    <div class="skill-pills">
+                        <span class="pill pill-dim">PHP</span>
+                        <span class="pill pill-dim">MySQL</span>
+                        <span class="pill pill-dim">C++</span>
+                        <span class="pill pill-dim">C</span>
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <h3 class="skills-label">Interests</h3>
+                    <div class="skill-pills">
+                        <span class="pill pill-blue">Cybersecurity</span>
+                        <span class="pill pill-blue">Web Dev</span>
+                        <span class="pill pill-blue">Linux</span>
+                        <span class="pill pill-blue">Networking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- RESUME -->
+    <section class="section" id="section-resume">
+        <div class="page-header">
+            <span class="page-num">02</span>
+            <h2 class="page-title">Experience</h2>
+            <div class="download-wrap">
+                <button class="btn-download" id="download-btn" onclick="toggleLangPicker()">
+                    ⬇ Download Resume
+                </button>
+                <div class="lang-picker" id="lang-picker">
+                    <a href="resume_en.pdf" target="_blank" rel="noopener" class="lang-option">
+                        <span class="lang-flag">🇺🇸</span>
+                        <div>
+                            <span class="lang-name">English</span>
+                            <span class="lang-sub">Resume</span>
+                        </div>
+                    </a>
+                    <a href="resume_pl.pdf" target="_blank" rel="noopener" class="lang-option">
+                        <span class="lang-flag">🇵🇱</span>
+                        <div>
+                            <span class="lang-name">Polish</span>
+                            <span class="lang-sub">Klasyczne CV</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="timeline-wrap">
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-marker current"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Service Desk Student Assistant</h3>
+                                <span class="timeline-employer">University of Colorado Denver | Anschutz Medical Campus</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge current-badge">Current</span>
+                                <span class="timeline-date">03/2026 — Present</span>
+                                <span class="timeline-location">📍 Denver, CO USA</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Providing account and software support for students, faculty, and staff of Denver and Anschutz campuses</li>
+                            <li>Working in CISCO Finesse, DUO, Oracle Identity Manager and Confluence</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="pill pill-green">IT Support</span>
+                            <span class="pill pill-green">Active Directory</span>
+                            <span class="pill pill-green">TeamDynamix</span>
+                            <span class="pill pill-green">DUO</span>
+                            <span class="pill pill-green">Confluence</span>
+                            <span class="pill pill-green">Finesse</span>
+                            <span class="pill pill-green">OIM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">ITS Help Desk Technician</h3>
+                                <span class="timeline-employer">Massasoit Community College</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-duration">1 yr 4 mos</span>
+                                <span class="timeline-date">08/2024 — 12/2025</span>
+                                <span class="timeline-location">📍 Brockton, MA USA</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Provided IT support to students and faculty</li>
+                            <li>Imaged and configured devices for classroom and faculty use</li>
+                            <li>Used enterprise tools including Microsoft Azure, Active Directory, TeamDynamix and Argos</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="pill pill-blue">Azure</span>
+                            <span class="pill pill-blue">Active Directory</span>
+                            <span class="pill pill-blue">TeamDynamix</span>
+                            <span class="pill pill-blue">Argos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Intern</h3>
+                                <span class="timeline-employer">Tax Office (Urząd Skarbowy w Krośnie)</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-duration">6 mos</span>
+                                <span class="timeline-date">02/2023 — 08/2023</span>
+                                <span class="timeline-location">📍 Krosno, Poland</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Streamlined office processes for improved efficiency and time management through regular organization and filing</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="pill pill-dim">Office Administration</span>
+                            <span class="pill pill-dim">Process Improvement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Intern</h3>
+                                <span class="timeline-employer">Mikrotech</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-duration">8 mos</span>
+                                <span class="timeline-date">09/2018 — 05/2019</span>
+                                <span class="timeline-location">📍 Krosno, Poland</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Gained hands-on experience in various software programs, increasing proficiency and expanding technical skill set</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="pill pill-dim">Technical Support</span>
+                            <span class="pill pill-dim">Software Proficiency</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="section-projects">
+        <div class="page-header">
+            <span class="page-num">03</span>
+            <h2 class="page-title">Projects</h2>
+        </div>
+        <div class="projects-grid">
+
+            <div class="proj-card">
+                <div class="proj-header">
+                    <span class="proj-icon">🌐</span>
+                    <span class="proj-tag">HTML · CSS · JS</span>
+                </div>
+                <h3>Portfolio Website</h3>
+                <p>The exact site you're browsing right now — built from scratch with responsive design, parallax effects, and smooth navigation.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge">Live</span>
+                </div>
+            </div>
+
+            <a class="proj-card" href="http://www.krosnoadwokat.pl" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">⚖️</span>
+                    <span class="proj-tag">HTML · CSS · JS</span>
+                </div>
+                <h3>Law Firm Website</h3>
+                <p>A professional website built with WordPress for a Polish law firm — clean, client-ready, and fully live.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">Visit ↗</span>
+                </div>
+            </a>
+            
+            <a class="proj-card" href="https://helinskij.github.io/paper_football/" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">⚽</span>
+                    <span class="proj-tag">HTML · CSS · JS</span>
+                </div>
+                <h3>Paper Football</h3>
+                <p>Classic game you probably played on paper in high school, now with better design and available online.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">Visit ↗</span>
+                </div>
+            </a>
+
+            <a class="proj-card" href="https://github.com/helinskij/snake_game" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">🐍</span>
+                    <span class="proj-tag">Python</span>
+                </div>
+                <h3>Snake Game</h3>
+                <p>The classic Snake game recreated in Python — smooth controls, score tracking, and increasing difficulty.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">GitHub ↗</span>
+                </div>
+            </a>
+
+            <a class="proj-card" href="https://github.com/helinskij/cross_the_road" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">🐸</span>
+                    <span class="proj-tag">Python</span>
+                </div>
+                <h3>Crossy Road</h3>
+                <p>A Crossy Road-inspired game built in Python — dodge traffic, cross lanes, and survive as long as you can.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">GitHub ↗</span>
+                </div>
+            </a>
+
+            <a class="proj-card" href="https://github.com/helinskij/pong_game" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">🏓</span>
+                    <span class="proj-tag">Python</span>
+                </div>
+                <h3>Pong Game</h3>
+                <p>The original arcade classic — two paddles, one ball, built entirely in Python with smooth gameplay.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">GitHub ↗</span>
+                </div>
+            </a>
+
+            <a class="proj-card" href="https://github.com/helinskij/To-Do-app" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">✅</span>
+                    <span class="proj-tag">HTML · CSS · JS</span>
+                </div>
+                <h3>To-Do App</h3>
+                <p>A clean, minimal task manager built with vanilla JS. Add, complete, and delete tasks with smooth interactions.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">GitHub ↗</span>
+                </div>
+            </a>
+
+            <a class="proj-card" href="https://github.com/helinskij/Calculator" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">🔢</span>
+                    <span class="proj-tag">HTML · CSS · JS</span>
+                </div>
+                <h3>Calculator App</h3>
+                <p>A fully functional calculator built with HTML, CSS, and JavaScript — clean UI with keyboard support.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">GitHub ↗</span>
+                </div>
+            </a>
+
+            <a class="proj-card" href="https://github.com/helinskij/console_blackjack_with_deposit" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">🃏</span>
+                    <span class="proj-tag">Python</span>
+                </div>
+                <h3>Console BlackJack</h3>
+                <p>A fun console-based Blackjack game in Python — complete with a deposit system, betting, and full game logic.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">GitHub ↗</span>
+                </div>
+            </a>
+
+            <a class="proj-card" href="https://github.com/helinskij/bank-management-system" target="_blank" rel="noopener">
+                <div class="proj-header">
+                    <span class="proj-icon">🏦</span>
+                    <span class="proj-tag">Java · OOP</span>
+                </div>
+                <h3>Bank Management System</h3>
+                <p>A Java-based banking simulation showcasing OOP principles — account creation, deposits, withdrawals, and balance checks.</p>
+                <div class="proj-footer">
+                    <span class="proj-badge proj-badge-gh">GitHub ↗</span>
+                </div>
+            </a>
+
+            <div class="proj-card proj-card-soon">
+                <div class="proj-header">
+                    <span class="proj-icon">🚀</span>
+                    <span class="proj-tag">In progress</span>
+                </div>
+                <h3>More coming soon…</h3>
+                <p>Always building something new. Check back soon or reach out to collaborate.</p>
+                <div class="proj-footer"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="section-contact">
+        <div class="page-header">
+            <span class="page-num">04</span>
+            <h2 class="page-title">Contact</h2>
+        </div>
+        <div class="contact-wrap">
+            <div class="contact-info">
+                <p class="contact-tagline">Let's build something great together.</p>
+                <div class="contact-email">
+                    <span class="contact-email-label">Direct email</span>
+                    <a href="mailto:contact@jakubhelinski.com">contact@jakubhelinski.com</a>
+                </div>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/mnnqgyyn" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell me more..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message →</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <span class="cookie-icon">🍪</span>
+            <p>This website uses essential cookies to ensure basic functionality. By continuing to use this site, you agree to our use of cookies.</p>
+        </div>
+        <div class="cookie-actions">
+            <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+            <a href="https://en.wikipedia.org/wiki/HTTP_cookie" class="cookie-learn">Learn more</a>
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
